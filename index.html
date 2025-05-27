@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Johnny Coppola - Classic American Songbook Singer performing jazz standards and original compositions in the tradition of the Rat Pack era.">
-    <meta name="keywords" content="Johnny Coppola, jazz singer, American Songbook, Las Vegas performer, jazz standards">
+    <meta name="description" content="Johnny Coppola - Classic American Songbook Singer performing jazz standards and original compositions in the tradition of the Rat Pack era. Monthly residency at Foundation Room, House of Blues Las Vegas.">
+    <meta name="keywords" content="Johnny Coppola, jazz singer, American Songbook, Las Vegas performer, jazz standards, Rat Pack, Foundation Room, House of Blues, Hollywood Indigo, A Shot To The Kisser">
     <meta name="author" content="Johnny Coppola">
+    <link rel="canonical" href="https://johnnycoppola.com">
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Johnny Coppola | Classic American Songbook Singer">
-    <meta property="og:description" content="Johnny Coppola brings the timeless elegance of the American Songbook to modern audiences">
-    <meta property="og:image" content="image_4.jpg">
+    <meta property="og:description" content="Johnny Coppola brings the timeless elegance of the American Songbook to modern audiences. Monthly residency at Foundation Room, House of Blues Las Vegas.">
+    <meta property="og:image" content="https://johnnycoppola.com/image_4.jpg">
     <meta property="og:url" content="https://johnnycoppola.com">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Johnny Coppola">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <title>Johnny Coppola | Classic American Songbook Singer</title>
+    <meta name="twitter:title" content="Johnny Coppola | Classic American Songbook Singer">
+    <meta name="twitter:description" content="Johnny Coppola brings the timeless elegance of the American Songbook to modern audiences. Monthly residency at Foundation Room, House of Blues Las Vegas.">
+    <meta name="twitter:image" content="https://johnnycoppola.com/image_4.jpg">
+    <meta name="twitter:site" content="@johnnycoppola">
+    <title>Johnny Coppola | Classic American Songbook Singer | Las Vegas Jazz Performer</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -23,7 +33,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #f8f5f0; /* Light beige background */
-            color: #333; /* Dark gray text */
+            color: #212121; /* Darker gray text for better contrast */
             scroll-behavior: smooth;
         }
 
@@ -115,6 +125,21 @@
             object-fit: cover;
         }
         
+        .video-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            z-index: 10;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        .video-container.loaded .video-loading {
+            display: none;
+        }
+        
         .testimonial {
             position: relative;
             padding: 2rem;
@@ -177,6 +202,62 @@
             }
         }
     </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Johnny Coppola",
+      "url": "https://johnnycoppola.com",
+      "genre": ["Jazz", "Swing", "American Songbook"],
+      "description": "Johnny Coppola is a torchbearer of the classic American songbook tradition, bringing the sophistication and charm of the Rat Pack era to contemporary audiences.",
+      "image": "https://johnnycoppola.com/image_4.jpg",
+      "sameAs": [
+        "https://www.facebook.com/pages/The-Rat-Pack-Poet",
+        "https://www.youtube.com/@johnnycoppola",
+        "https://music.apple.com/us/artist/johnny-coppola/314924071",
+        "https://music.amazon.com/artists/B0023GX8FI/johnny-coppola"
+      ],
+      "album": [
+        {
+          "@type": "MusicAlbum",
+          "name": "A Shot To The Kisser",
+          "datePublished": "2020",
+          "url": "https://music.apple.com/us/album/a-shot-to-the-kisser/1526394782"
+        },
+        {
+          "@type": "MusicAlbum",
+          "name": "Hollywood Indigo",
+          "datePublished": "2009",
+          "url": "https://music.apple.com/us/album/hollywood-indigo/335128019"
+        }
+      ],
+      "event": {
+        "@type": "MusicEvent",
+        "name": "Johnny Coppola at Foundation Room",
+        "startDate": "2025-05-18T20:00",
+        "endDate": "2025-05-18T23:00",
+        "location": {
+          "@type": "MusicVenue",
+          "name": "Foundation Room at House of Blues Las Vegas",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3950 S Las Vegas Blvd",
+            "addressLocality": "Las Vegas",
+            "addressRegion": "NV",
+            "postalCode": "89119",
+            "addressCountry": "US"
+          }
+        },
+        "performer": {
+          "@type": "MusicGroup",
+          "name": "Johnny Coppola"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -193,23 +274,56 @@
                 <a href="#bio" class="nav-link text-white hover:text-amber-400 transition">Bio</a>
                 <a href="#video" class="nav-link text-white hover:text-amber-400 transition">Video</a>
                 <a href="#testimonials" class="nav-link text-white hover:text-amber-400 transition">Testimonials</a>
+                <a href="#press" class="nav-link text-white hover:text-amber-400 transition">Press</a>
                 <a href="#contact" class="nav-link text-white hover:text-amber-400 transition">Contact</a>
             </div>
             <div class="md:hidden">
-                <button class="text-white focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <button class="text-white focus:outline-none p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
-                <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-black p-4">
-                    <a href="#music" class="block py-2 text-white hover:text-amber-400">Music</a>
-                    <a href="#live" class="block py-2 text-white hover:text-amber-400">Live</a>
-                    <a href="#bio" class="block py-2 text-white hover:text-amber-400">Bio</a>
-                    <a href="#video" class="block py-2 text-white hover:text-amber-400">Video</a>
-                    <a href="#testimonials" class="block py-2 text-white hover:text-amber-400">Testimonials</a>
-                    <a href="#contact" class="block py-2 text-white hover:text-amber-400">Contact</a>
-                </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-6">
+                <div class="text-2xl title-font text-white">
+                    <span class="text-amber-600">Johnny</span> Coppola
+                </div>
+                <button class="text-white p-2" aria-label="Close menu" id="close-menu">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="flex-1 flex flex-col justify-center px-8">
+                <a href="#music" class="block py-4 text-2xl text-white hover:text-amber-400 transition text-center">Music</a>
+                <a href="#live" class="block py-4 text-2xl text-white hover:text-amber-400 transition text-center">Live</a>
+                <a href="#bio" class="block py-4 text-2xl text-white hover:text-amber-400 transition text-center">Bio</a>
+                <a href="#video" class="block py-4 text-2xl text-white hover:text-amber-400 transition text-center">Video</a>
+                <a href="#testimonials" class="block py-4 text-2xl text-white hover:text-amber-400 transition text-center">Testimonials</a>
+                <a href="#press" class="block py-4 text-2xl text-white hover:text-amber-400 transition text-center">Press</a>
+                <a href="#contact" class="block py-4 text-2xl text-white hover:text-amber-400 transition text-center">Contact</a>
+            </nav>
+            <div class="p-6 text-center">
+                <div class="flex justify-center space-x-4 mb-4">
+                    <a href="https://www.facebook.com/pages/The-Rat-Pack-Poet" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-white hover:text-amber-400 transition">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@johnnycoppola" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-white hover:text-amber-400 transition">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://music.apple.com/us/artist/johnny-coppola/314924071" target="_blank" rel="noopener noreferrer" aria-label="Apple Music" class="text-white hover:text-amber-400 transition">
+                        <i class="fab fa-apple text-xl"></i>
+                    </a>
+                    <a href="https://music.amazon.com/artists/B0023GX8FI/johnny-coppola" target="_blank" rel="noopener noreferrer" aria-label="Amazon Music" class="text-white hover:text-amber-400 transition">
+                        <i class="fab fa-amazon text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-400 text-sm">© 2025 Johnny Coppola</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero text-white">
@@ -240,7 +354,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="flex justify-center relative">
                     <div class="album-badge">Latest Release</div>
-                    <img src="Johnny Coppola A Shot To The Kisser.jpg" alt="A Shot To The Kisser Album Cover" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-lg shadow-xl vinyl">
+                    <img src="Johnny Coppola A Shot To The Kisser.jpg" alt="A Shot To The Kisser Album Cover" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-lg shadow-xl vinyl" loading="lazy">
                 </div>
 
                 <div>
@@ -253,15 +367,18 @@
                             <i class="far fa-star" aria-hidden="true"></i>
                             <i class="far fa-star" aria-hidden="true"></i>
                         </div>
-                        <span class="ml-2 text-gray-600">3/5 - Jazz Monthly</span>
+                        <span class="ml-2 text-gray-700">3/5 - Jazz Monthly</span>
                     </div>
-                    <p class="text-gray-600 mb-6">Praised for its emotional depth and vocal range, this album showcases Johnny's unique interpretation of classic standards and original compositions that capture the essence of the golden era of jazz.</p>
+                    <p class="text-gray-700 mb-6">Praised for its emotional depth and vocal range, this album showcases Johnny's unique interpretation of classic standards and original compositions that capture the essence of the golden era of jazz.</p>
                     <div class="flex flex-wrap gap-4">
                         <a href="https://music.apple.com/us/album/a-shot-to-the-kisser/1526394782" target="_blank" rel="noopener noreferrer" class="bg-black hover:bg-gray-800 text-white px-6 py-2 rounded-full flex items-center transition">
                             <i class="fab fa-apple mr-2" aria-hidden="true"></i> Apple Music
                         </a>
-                        <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full flex items-center transition">
-                            <i class="fab fa-spotify mr-2" aria-hidden="true"></i> Spotify
+                        <a href="https://music.amazon.com/artists/B0023GX8FI/johnny-coppola" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full flex items-center transition">
+                            <i class="fab fa-amazon mr-2" aria-hidden="true"></i> Amazon Music
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=1lnl-RE2V5I" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full flex items-center transition">
+                            <i class="fab fa-youtube mr-2" aria-hidden="true"></i> YouTube
                         </a>
                         <a href="http://www.emusic.com/album/johnny-coppola/a-shot-to-the-kisser/13998684/" target="_blank" rel="noopener noreferrer" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full flex items-center transition">
                             <i class="fas fa-music mr-2" aria-hidden="true"></i> eMusic
@@ -272,7 +389,7 @@
 
             <div class="grid md:grid-cols-2 gap-12 items-center mt-16 md:mt-20">
                 <div class="md:order-2 flex justify-center">
-                    <img src="Johnny Coppola hollywood indigo.webp" alt="Hollywood Indigo Album Cover" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-lg shadow-xl vinyl">
+                    <img src="Johnny Coppola hollywood indigo.webp" alt="Hollywood Indigo Album Cover" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-lg shadow-xl vinyl" loading="lazy">
                 </div>
 
                 <div class="md:order-1">
@@ -285,15 +402,18 @@
                             <i class="fas fa-star" aria-hidden="true"></i>
                             <i class="far fa-star" aria-hidden="true"></i>
                         </div>
-                        <span class="ml-2 text-gray-600">4/5 - Vocal Jazz Review</span>
+                        <span class="ml-2 text-gray-700">4/5 - Vocal Jazz Review</span>
                     </div>
-                    <p class="text-gray-600 mb-6">Johnny's debut album that established his signature sound - a perfect blend of jazz, blues, and classic American songbook style. Features his popular rendition of "Fly Me to the Moon" and original track "Starlit Avenue."</p>
+                    <p class="text-gray-700 mb-6">Johnny's debut album that established his signature sound - a perfect blend of jazz, blues, and classic American songbook style. Features his popular rendition of "Fly Me to the Moon" and original track "Starlit Avenue."</p>
                     <div class="flex flex-wrap gap-4">
                         <a href="https://music.apple.com/us/album/hollywood-indigo/335128019" target="_blank" rel="noopener noreferrer" class="bg-black hover:bg-gray-800 text-white px-6 py-2 rounded-full flex items-center transition">
                             <i class="fab fa-apple mr-2" aria-hidden="true"></i> Apple Music
                         </a>
-                        <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full flex items-center transition">
-                            <i class="fab fa-spotify mr-2" aria-hidden="true"></i> Spotify
+                        <a href="https://music.amazon.com/artists/B0023GX8FI/johnny-coppola" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full flex items-center transition">
+                            <i class="fab fa-amazon mr-2" aria-hidden="true"></i> Amazon Music
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=4gTfBL2igRc" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full flex items-center transition">
+                            <i class="fab fa-youtube mr-2" aria-hidden="true"></i> YouTube
                         </a>
                     </div>
                 </div>
@@ -308,26 +428,26 @@
 
             <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="relative">
-                    <img src="image_3.jpg" alt="Johnny Coppola performing live with his band" class="w-full h-64 md:h-80 object-cover">
+                    <img src="image_3.jpg" alt="Johnny Coppola performing live with his band" class="w-full h-64 md:h-80 object-cover" loading="lazy">
                     <div class="live-badge">Monthly Residency</div>
                 </div>
                 <div class="p-6 md:p-8">
                     <h3 class="title-font text-2xl mb-4 text-gray-900">Foundation Room at House of Blues</h3>
-                    <p class="text-gray-600 mb-6">Johnny performs monthly at this legendary Las Vegas venue, bringing the classic American songbook to life in an intimate setting with his exceptional band and special guest performers.</p>
+                    <p class="text-gray-700 mb-6">Johnny performs monthly at this legendary Las Vegas venue, bringing the classic American songbook to life in an intimate setting with his exceptional band and special guest performers.</p>
 
                     <div class="grid sm:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-semibold text-gray-800 mb-2">Next Performance:</h4>
                             <p class="text-amber-700 font-medium">Every third Saturday of the month</p>
-                            <p class="text-gray-600 mt-1">8:00 PM - 11:00 PM</p>
-                            <p class="text-gray-600 mt-2 italic">Reservations recommended</p>
+                            <p class="text-gray-700 mt-1">8:00 PM - 11:00 PM</p>
+                            <p class="text-gray-700 mt-2 italic">Reservations recommended</p>
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800 mb-2">Location:</h4>
                             <p class="text-gray-800">House of Blues Las Vegas</p>
-                            <p class="text-gray-600">3950 S Las Vegas Blvd, Las Vegas, NV 89119</p>
-                            <p class="text-gray-600 mt-2">
-                                <i class="fas fa-parking text-amber-600 mr-1" aria-hidden="true"></i> Valet parking available
+                            <p class="text-gray-700">3950 S Las Vegas Blvd, Las Vegas, NV 89119</p>
+                            <p class="text-gray-700 mt-2">
+                                <i class="fas fa-parking text-amber-700 mr-1" aria-hidden="true"></i> Valet parking available
                             </p>
                         </div>
                     </div>
@@ -336,9 +456,16 @@
                         <a href="https://www.houseofblues.com/lasvegas/fr" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition inline-flex items-center">
                             <i class="fas fa-ticket-alt mr-2" aria-hidden="true"></i> Venue Info & Tickets
                         </a>
-                        <a href="#" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-full font-semibold transition inline-flex items-center">
-                            <i class="far fa-calendar-alt mr-2" aria-hidden="true"></i> Full Event Calendar
+                        <a href="#contact" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-full font-semibold transition inline-flex items-center">
+                            <i class="fas fa-envelope mr-2" aria-hidden="true"></i> Book for Private Events
                         </a>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+                        <p class="text-gray-700 text-sm italic">
+                            <i class="fas fa-info-circle text-amber-600 mr-2" aria-hidden="true"></i>
+                            For special events, corporate performances, and private bookings, please contact Billie Wilson.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -352,13 +479,68 @@
 
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <img src="image_4.jpg" alt="Johnny Coppola portrait" class="w-full rounded-lg shadow-xl">
+                    <img src="image_4.jpg" alt="Johnny Coppola portrait" class="w-full rounded-lg shadow-xl" loading="lazy">
                 </div>
                 <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md border border-gray-200">
                     <p class="mb-4 text-gray-700 leading-relaxed">Johnny Coppola is a torchbearer of the classic American songbook tradition, bringing the sophistication and charm of the Rat Pack era to contemporary audiences.</p>
                     <p class="mb-4 text-gray-700 leading-relaxed">With a voice that channels the golden age of jazz and swing, Johnny's performances are a masterclass in timeless musicality. His repertoire includes both beloved standards and original compositions that feel instantly classic.</p>
                     <p class="mb-4 text-gray-700 leading-relaxed">From intimate jazz clubs to the legendary Studio A at Capitol Records, Johnny has captivated audiences with his smooth vocals, impeccable phrasing, and undeniable stage presence.</p>
                     <p class="text-gray-700 leading-relaxed">When not performing, Johnny can be found mentoring young musicians, preserving the legacy of America's musical heritage for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section id="audio" class="py-16 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="title-font text-3xl md:text-4xl text-center mb-12 text-gray-800 section-heading">Listen to Johnny</h2>
+            
+            <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                <div class="text-center mb-8">
+                    <i class="fas fa-headphones text-amber-600 text-5xl mb-4"></i>
+                    <p class="text-gray-700">Experience the smooth vocals and timeless elegance of Johnny Coppola</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Good Lookin Blues</h4>
+                                <p class="text-sm text-gray-600">From "A Shot To The Kisser"</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=1lnl-RE2V5I" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition">
+                                <i class="fas fa-play mr-2" aria-hidden="true"></i> Play
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Hazel Eyed Brunette</h4>
+                                <p class="text-sm text-gray-600">Original Composition</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=4gTfBL2igRc" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition">
+                                <i class="fas fa-play mr-2" aria-hidden="true"></i> Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600 mb-4">Stream full albums on your favorite platform:</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://music.apple.com/us/artist/johnny-coppola/314924071" target="_blank" rel="noopener noreferrer" class="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-semibold transition">
+                            <i class="fab fa-apple mr-2" aria-hidden="true"></i> Apple Music
+                        </a>
+                        <a href="https://music.amazon.com/artists/B0023GX8FI/johnny-coppola" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition">
+                            <i class="fab fa-amazon mr-2" aria-hidden="true"></i> Amazon Music
+                        </a>
+                        <a href="https://www.youtube.com/@johnnycoppola" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition">
+                            <i class="fab fa-youtube mr-2" aria-hidden="true"></i> YouTube
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,7 +555,10 @@
                 <!-- Video 1 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="video-container">
-                        <video controls poster="image_3.jpg" preload="none">
+                        <div class="video-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <video controls poster="image_3.jpg" preload="none" controlsList="nodownload">
                             <source src="jc-video-1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -387,7 +572,10 @@
                 <!-- Video 2 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="video-container">
-                        <video controls poster="image_4.jpg" preload="none">
+                        <div class="video-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <video controls poster="image_4.jpg" preload="none" controlsList="nodownload">
                             <source src="jc-video-2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -449,54 +637,80 @@
         </div>
     </section>
 
-    <!-- Upcoming Events Section (New) -->
-    <section id="events" class="py-16 px-6 bg-gray-100">
+    <!-- Press Kit Section -->
+    <section id="press" class="py-16 px-6 bg-white">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="title-font text-3xl md:text-4xl text-center mb-12 text-gray-800 section-heading">Upcoming Events</h2>
+            <h2 class="title-font text-3xl md:text-4xl text-center mb-12 text-gray-800 section-heading">Press Kit</h2>
             
-            <div class="overflow-hidden bg-white shadow-lg rounded-lg">
-                <div class="p-6">
-                    <div class="space-y-6">
-                        <div class="border-b border-gray-200 pb-4">
-                            <div class="flex items-start justify-between">
-                                <div>
-                                    <h3 class="title-font text-xl text-gray-900">Foundation Room Residency</h3>
-                                    <p class="text-amber-700 font-medium">May 18, 2025</p>
-                                    <p class="text-gray-600">8:00 PM - 11:00 PM</p>
-                                </div>
-                                <span class="bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full uppercase font-semibold">Las Vegas</span>
-                            </div>
-                        </div>
-                        
-                        <div class="border-b border-gray-200 pb-4">
-                            <div class="flex items-start justify-between">
-                                <div>
-                                    <h3 class="title-font text-xl text-gray-900">Jazz Under the Stars</h3>
-                                    <p class="text-amber-700 font-medium">June 5, 2025</p>
-                                    <p class="text-gray-600">7:30 PM - 10:00 PM</p>
-                                </div>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full uppercase font-semibold">Los Angeles</span>
-                            </div>
-                        </div>
-                        
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="title-font text-xl mb-4 text-gray-900">
+                        <i class="fas fa-download text-amber-600 mr-2" aria-hidden="true"></i> Downloads
+                    </h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-amber-700 hover:text-amber-800 transition flex items-center">
+                                <i class="fas fa-file-pdf mr-2" aria-hidden="true"></i> Official Biography (PDF)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-amber-700 hover:text-amber-800 transition flex items-center">
+                                <i class="fas fa-images mr-2" aria-hidden="true"></i> High Resolution Photos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-amber-700 hover:text-amber-800 transition flex items-center">
+                                <i class="fas fa-music mr-2" aria-hidden="true"></i> Audio Samples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-amber-700 hover:text-amber-800 transition flex items-center">
+                                <i class="fas fa-file-alt mr-2" aria-hidden="true"></i> Technical Rider
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="title-font text-xl mb-4 text-gray-900">
+                        <i class="fas fa-quote-left text-amber-600 mr-2" aria-hidden="true"></i> Press Quotes
+                    </h3>
+                    <div class="space-y-4">
                         <div>
-                            <div class="flex items-start justify-between">
-                                <div>
-                                    <h3 class="title-font text-xl text-gray-900">Foundation Room Residency</h3>
-                                    <p class="text-amber-700 font-medium">June 15, 2025</p>
-                                    <p class="text-gray-600">8:00 PM - 11:00 PM</p>
-                                </div>
-                                <span class="bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full uppercase font-semibold">Las Vegas</span>
-                            </div>
+                            <p class="text-gray-700 italic">"Johnny Coppola embodies the spirit and sophistication of Sinatra with a modern edge that is entirely his own."</p>
+                            <p class="text-gray-600 text-sm mt-1">— Vegas Entertainment Weekly</p>
                         </div>
-                    </div>
-                    
-                    <div class="mt-8 text-center">
-                        <a href="#" class="inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition">
-                            <i class="far fa-calendar-alt mr-2" aria-hidden="true"></i> View All Events
-                        </a>
+                        <div>
+                            <p class="text-gray-700 italic">"A voice that carries the soul of jazz with the power of contemporary vocalists."</p>
+                            <p class="text-gray-600 text-sm mt-1">— Jazz Quarterly</p>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="md:col-span-2 bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="title-font text-xl mb-4 text-gray-900">
+                        <i class="fas fa-info-circle text-amber-600 mr-2" aria-hidden="true"></i> Quick Facts
+                    </h3>
+                    <div class="grid sm:grid-cols-2 gap-4 text-gray-700">
+                        <div>
+                            <p><strong>Genre:</strong> Jazz, Swing, American Songbook</p>
+                            <p><strong>Albums:</strong> 2 Studio Albums</p>
+                            <p><strong>Latest Release:</strong> "A Shot To The Kisser" (2020)</p>
+                        </div>
+                        <div>
+                            <p><strong>Residency:</strong> Foundation Room, Las Vegas</p>
+                            <p><strong>Notable Venues:</strong> Capitol Records Studio A</p>
+                            <p><strong>Available For:</strong> Concerts, Corporate Events, Private Performances</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-gray-700 mb-4">For media inquiries and press materials:</p>
+                <a href="mailto:press@johnnycoppola.com" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition inline-flex items-center">
+                    <i class="fas fa-envelope mr-2" aria-hidden="true"></i> Contact Press Team
+                </a>
             </div>
         </div>
     </section>
@@ -511,21 +725,14 @@
                     <h3 class="title-font text-xl mb-4">Join the Mailing List</h3>
                     <p class="text-gray-300 mb-6">Get updates on upcoming shows, new releases, and exclusive content delivered directly to your inbox.</p>
 
-                    <form class="space-y-4" action="#" method="POST" id="subscribe-form">
-                        <div>
-                            <label for="name" class="sr-only">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-amber-500 text-white placeholder-gray-500">
-                        </div>
-                        <div>
-                            <label for="email" class="sr-only">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-amber-500 text-white placeholder-gray-500">
-                        </div>
-                        <div class="flex items-start mb-4">
-                            <input type="checkbox" id="consent" name="consent" class="mt-1 h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-700 rounded" required>
-                            <label for="consent" class="ml-2 text-sm text-gray-300">I agree to receive email updates and marketing messages. You can unsubscribe at any time.</label>
-                        </div>
-                        <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition w-full">Subscribe</button>
-                    </form>
+                    <div class="text-center p-8 bg-gray-800 rounded-lg border border-gray-700">
+                        <i class="fas fa-envelope text-amber-600 text-4xl mb-4"></i>
+                        <p class="text-gray-300 mb-6">Stay in the loop with Johnny's latest performances and releases.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfn8Pa0XLZuDjGk12IPLA58rDHPTJhtNqcPIbMWqzg6vJ4kYA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-semibold transition inline-flex items-center">
+                            <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i> Sign Up for Newsletter
+                        </a>
+                        <p class="text-gray-500 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+                    </div>
                 </div>
 
                 <div>
@@ -533,17 +740,17 @@
                     <p class="text-gray-300 mb-6">Connect on social media for the latest news and behind-the-scenes content.</p>
 
                     <div class="flex space-x-4 mb-8">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition">
+                        <a href="https://www.facebook.com/pages/The-Rat-Pack-Poet" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition">
                             <i class="fab fa-facebook-f text-xl" aria-hidden="true"></i>
                         </a>
                         <a href="https://www.youtube.com/@johnnycoppola" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon bg-red-600 hover:bg-red-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition">
                             <i class="fab fa-youtube text-xl" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon bg-pink-600 hover:bg-pink-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition">
-                            <i class="fab fa-instagram text-xl" aria-hidden="true"></i>
+                        <a href="https://music.apple.com/us/artist/johnny-coppola/314924071" target="_blank" rel="noopener noreferrer" aria-label="Apple Music" class="social-icon bg-gray-800 hover:bg-gray-900 text-white w-12 h-12 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-apple text-xl" aria-hidden="true"></i>
                         </a>
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-icon bg-blue-400 hover:bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center transition">
-                            <i class="fab fa-twitter text-xl" aria-hidden="true"></i>
+                        <a href="https://music.amazon.com/artists/B0023GX8FI/johnny-coppola" target="_blank" rel="noopener noreferrer" aria-label="Amazon Music" class="social-icon bg-orange-500 hover:bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-amazon text-xl" aria-hidden="true"></i>
                         </a>
                     </div>
 
@@ -552,7 +759,7 @@
                         <p class="text-gray-300">Billie Wilson</p>
                         <a href="tel:+17024134145" class="text-gray-300 hover:text-amber-400 transition">(702) 413-4145</a>
                         <br>
-                        <a href="mailto:booking@johnnycoppola.com" class="text-gray-300 hover:text-amber-400 transition">booking@johnnycoppola.com</a>
+                        <a href="mailto:info@johnnycoppola.com" class="text-gray-300 hover:text-amber-400 transition">info@johnnycoppola.com</a>
                     </div>
                 </div>
             </div>
@@ -569,11 +776,13 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 md:flex md:space-x-8 text-center md:text-left mb-4 md:mb-0">
+                <div class="grid grid-cols-3 md:flex md:space-x-8 text-center md:text-left mb-4 md:mb-0">
                     <a href="#music" class="text-sm text-gray-400 hover:text-white transition py-1">Music</a>
                     <a href="#live" class="text-sm text-gray-400 hover:text-white transition py-1">Live</a>
                     <a href="#bio" class="text-sm text-gray-400 hover:text-white transition py-1">Bio</a>
+                    <a href="#audio" class="text-sm text-gray-400 hover:text-white transition py-1">Listen</a>
                     <a href="#video" class="text-sm text-gray-400 hover:text-white transition py-1">Video</a>
+                    <a href="#press" class="text-sm text-gray-400 hover:text-white transition py-1">Press</a>
                 </div>
 
                 <div class="text-sm">
@@ -590,30 +799,34 @@
         // Mobile Menu Toggle
         const menuButton = document.querySelector('.md\\:hidden button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu');
+        const body = document.body;
 
-        menuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-            const icon = menuButton.querySelector('i');
-            const expanded = mobileMenu.classList.contains('hidden') ? 'false' : 'true';
-            menuButton.setAttribute('aria-expanded', expanded);
-            
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        });
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            body.style.overflow = 'hidden'; // Prevent body scroll when menu is open
+            menuButton.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+            body.style.overflow = ''; // Restore body scroll
+            menuButton.setAttribute('aria-expanded', 'false');
+        }
+
+        menuButton.addEventListener('click', openMenu);
+        closeMenuButton.addEventListener('click', closeMenu);
 
         // Close mobile menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuButton.setAttribute('aria-expanded', 'false');
-                menuButton.querySelector('i').classList.remove('fa-times');
-                menuButton.querySelector('i').classList.add('fa-bars');
-            });
+        mobileMenu.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                closeMenu();
+            }
         });
         
         // Smooth scroll for navigation links
@@ -637,7 +850,7 @@
             });
         });
         
-        // Lazy load videos
+        // Lazy load videos with loading states
         document.addEventListener('DOMContentLoaded', function() {
             const videos = document.querySelectorAll('video');
             const options = {
@@ -645,6 +858,27 @@
                 rootMargin: '100px', // Load when within 100px of viewport
                 threshold: 0.1
             };
+            
+            // Add loading state handlers
+            videos.forEach(video => {
+                const container = video.closest('.video-container');
+                
+                video.addEventListener('loadstart', function() {
+                    container.classList.remove('loaded');
+                });
+                
+                video.addEventListener('loadeddata', function() {
+                    container.classList.add('loaded');
+                });
+                
+                video.addEventListener('error', function() {
+                    container.classList.add('loaded');
+                    const loading = container.querySelector('.video-loading');
+                    if (loading) {
+                        loading.innerHTML = '<i class="fas fa-exclamation-triangle"></i><p class="text-sm mt-2">Unable to load video</p>';
+                    }
+                });
+            });
             
             if ('IntersectionObserver' in window) {
                 const observer = new IntersectionObserver((entries, observer) => {
@@ -678,30 +912,6 @@
                 });
             }
         });
-        
-        // Form submission handler
-        const form = document.getElementById('subscribe-form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Here you would typically send the form data to a server
-                // For now, just show a success message
-                const formData = new FormData(form);
-                const data = Object.fromEntries(formData.entries());
-                
-                // Simple validation
-                if (!data.email) {
-                    alert('Please enter your email address.');
-                    return;
-                }
-                
-                // Clear form and show success message
-                form.innerHTML = `<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-                    <strong class="font-bold">Success!</strong>
-                    <span class="block sm:inline"> Thank you for subscribing. You'll receive the latest updates from Johnny Coppola.</span>
-                </div>`;
-            });
-        }
     </script>
 </body>
 </html>
