@@ -182,23 +182,23 @@
     <section class="py-16 px-6 bg-charcoal">
         <div class="container mx-auto max-w-4xl">
             <div class="text-center mb-8">
-                <p class="text-gold uppercase tracking-widest mb-2">Featured Performance</p>
-                <h2 class="playfair text-3xl md:text-4xl">Live at Capitol Records</h2>
+                <p class="text-gold uppercase tracking-widest mb-2">Featured Video</p>
+                <h2 class="playfair text-3xl md:text-4xl">Johnny Coppola Promo</h2>
             </div>
             <div class="relative rounded-lg overflow-hidden album-shadow">
-                <div class="aspect-video">
-                    <iframe 
-                        src="https://www.youtube.com/embed/nMmlAOjUV1s?rel=0&modestbranding=1" 
-                        title="Johnny Coppola - Good Lookin Blues - Live at Capitol Records"
-                        class="absolute inset-0 w-full h-full"
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+                <div class="aspect-video bg-smoke">
+                    <video 
+                        controls
+                        poster="image_4.jpg"
+                        class="absolute inset-0 w-full h-full object-cover"
+                        preload="metadata">
+                        <source src="jc-video-3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
             <p class="text-center mt-6 text-cream/70 italic">
-                Experience Johnny's smooth vocals and timeless style in this exclusive Capitol Records session
+                Experience the timeless elegance and smooth vocals of Johnny Coppola
             </p>
         </div>
     </section>
@@ -333,6 +333,20 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
+                <a href="https://www.youtube.com/watch?v=nMmlAOjUV1s" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="group relative overflow-hidden rounded-lg album-shadow">
+                    <img src="image_3.jpg" alt="Good Lookin Blues Performance" 
+                         class="w-full aspect-video object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-charcoal/60 flex items-center justify-center group-hover:bg-charcoal/40 transition">
+                        <i class="fas fa-play-circle text-5xl text-cream/80 group-hover:text-gold transition"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-charcoal to-transparent">
+                        <p class="text-lg font-medium">Good Lookin Blues</p>
+                        <p class="text-cream/70 text-sm">Live at Capitol Records</p>
+                    </div>
+                </a>
+                
                 <a href="https://www.youtube.com/watch?v=EYFy_j9AwDY" 
                    target="_blank" rel="noopener noreferrer"
                    class="group relative overflow-hidden rounded-lg album-shadow">
@@ -358,20 +372,6 @@
                     <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-charcoal to-transparent">
                         <p class="text-lg font-medium">A Shot To The Kisser</p>
                         <p class="text-cream/70 text-sm">Album Track</p>
-                    </div>
-                </a>
-                
-                <a href="https://www.youtube.com/watch?v=4gTfBL2igRc" 
-                   target="_blank" rel="noopener noreferrer"
-                   class="group relative overflow-hidden rounded-lg album-shadow">
-                    <img src="image_3.jpg" alt="Hazel Eyed Brunette" 
-                         class="w-full aspect-video object-cover group-hover:scale-105 transition duration-500" loading="lazy">
-                    <div class="absolute inset-0 bg-charcoal/60 flex items-center justify-center group-hover:bg-charcoal/40 transition">
-                        <i class="fas fa-play-circle text-5xl text-cream/80 group-hover:text-gold transition"></i>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-charcoal to-transparent">
-                        <p class="text-lg font-medium">Hazel Eyed Brunette</p>
-                        <p class="text-cream/70 text-sm">Original Poem</p>
                     </div>
                 </a>
             </div>
